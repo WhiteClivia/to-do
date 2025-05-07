@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="client.css"></link>
+    </head>
+    <body>
+        <header id="header"> (error) </header>
+        <div id="sidebar"> (error) </div>
+        <div id="main-body">
+            (error)
+        </div>
+
+        <script type="module" src="/client.js"> 
+            //чисто импортируется из другого файла 
+        </script>
+        <script>
+
+            
+            function applyStyles () {
+
+                let padding = window.innerWidth * 0.02;
+                    if (padding <5) {padding = 5;}
+                    else if (padding>10) {padding = 10;}
+                let height = 100 //window.innerHeight * 0.01;
+                    if (height <10) {height = 10;}
+                    else if (height>20) {height = 20;}
+                let width = window.innerWidth * 0.05;
+                    if (width <90) {width = 90;}
+                    else if (width>120) {width = 120;}
+
+                const header = document.getElementById('header');
+                const sidebar = document.getElementById('sidebar');
+                const mainBody = document.getElementById('main-body');
+
+                header.style.padding = `${padding}px`;
+                header.style.width = `${window.innerWidth - 20}px`;
+                sidebar.style.width = `${width}px`;
+                mainBody.style.marginLeft = `${width + 5}px`;
+                mainBody.style.marginTop = `${height + padding*2 + 10}px`;
+                mainBody.style.padding = '5px';
+            }
+
+            window.addEventListener('resize', applyStyles);
+            window.addEventListener('DOMContentLoaded', applyStyles);
+        </script>
+    </body>
+</html>

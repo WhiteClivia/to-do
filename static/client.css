@@ -1,0 +1,32 @@
+body {
+    padding: 0px;
+    background-color: #ffd1e6;
+    margin: 5px;
+}
+#header {
+    color: #c7aed2;
+    background-color: #fdfbf5;
+    position: fixed;
+    top: 5px;
+}
+#main-body {
+    background-color: #b4c1d8;
+    color: #fdfbf5;
+    height: 100%;
+
+}
+#sidebar {
+    background-color: #fdfbf5;
+    color: #c7aed2;
+    height: 100%;
+    position: fixed;
+}
+button {
+    color: #c7aed2;
+    background-color: transparent;
+    border: none;
+}
+tr {
+    background-color: #fdfbf5;
+    color: #c7aed2
+}
